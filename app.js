@@ -45,13 +45,18 @@ function render(){
  if(!cat){host.innerHTML='<div class="empty-state">القسم غير موجود.</div>';return}
 
 
- const products=catalog.products.filter(p=>p.categoryId===cat.id);host.innerHTML=`<section class="category-section product-showcase" data-category-section="${cat.section}"><div class="category-header"><h2>${esc(cat.name)}</h2><p>${products.length} منتج</p></div><div class="category-rail product-rail">${products.map(p=>card(p)).join('')}</div></section>`;
+ const products=catalog.products.filter(p=>p.categoryId===cat.id);host.innerHTML=`<section class="category-section product-showcase" data-category-section="${cat.section}"><div class="category-header"><h2>${esc(cat.name)}</h2><p>${products.length} منتج</p></div><div class="product-rail-controls" aria-label="تصفح المنتجات"><button type="button" data-rail-dir="previous" aria-label="المنتجات السابقة">→</button><span>اسحب أو استخدم الأسهم لمشاهدة المنتجات</span><button type="button" data-rail-dir="next" aria-label="المنتجات التالية">←</button></div><div class="category-rail product-rail">${products.map(p=>card(p)).join('')}</div></section>`;
+ const rail=host.querySelector('.product-rail');
+ host.querySelectorAll('[data-rail-dir]').forEach(btn=>btn.onclick=()=>scrollProductRail(rail,btn.dataset.railDir));
+ enableHorizontalWheel(rail);
  host.querySelectorAll('[data-add]').forEach(btn=>btn.onclick=()=>{const p=catalog.products.find(x=>x.id===Number(btn.dataset.add));if(p)addToCart(p)});host.querySelectorAll('[data-fav]').forEach(btn=>btn.onclick=()=>toggleFav(Number(btn.dataset.fav)));updateFavButtons()
 }
 
 
 
 function card(p){let img=productImage(p);return `<article class="product-card"><span class="active-badge">ACTIVE</span><button class="favorite-btn" aria-label="أضف للمفضلة" data-fav="${p.id}">♡</button><div class="product-image ${hasOwnProductImage(p)?'':'logo-fallback'}"><img src="${img}" alt="${esc(p.name)}" loading="lazy" onerror="this.onerror=null;this.src='assets/logo-tivoli.webp';this.parentElement.classList.add('logo-fallback')"></div><div class="product-content"><h3>${esc(p.name)}</h3>${p.nameEn?`<h4>${esc(p.nameEn)}</h4>`:''}</div><div class="product-card-footer"><span class="product-card-price">${money(p.price)} EGP</span><button class="product-card-action" data-add="${p.id}" aria-label="أضف إلى السلة">→</button></div></article>`}
+function scrollProductRail(rail,direction){if(!rail)return;const sign=getComputedStyle(rail).direction==='rtl'?-1:1;rail.scrollBy({left:sign*(direction==='next'?1:-1)*Math.max(280,rail.clientWidth*.8),behavior:'smooth'})}
+function enableHorizontalWheel(rail){if(!rail||rail.dataset.wheelEnabled)return;rail.dataset.wheelEnabled='true';rail.addEventListener('wheel',event=>{if(Math.abs(event.deltaY)<=Math.abs(event.deltaX)||rail.scrollWidth<=rail.clientWidth+1)return;event.preventDefault();const sign=getComputedStyle(rail).direction==='rtl'?-1:1;rail.scrollBy({left:sign*event.deltaY,behavior:'auto'})},{passive:false})}
 function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 let cart=read('tivoli_static_cart',[]), favs=read('tivoli_static_favs',[]);
 

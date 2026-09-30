@@ -69,3 +69,10 @@ body{overflow-x:hidden}
  .topbar>button{font-size:11px;padding:8px}
  .category-tile,.product-card{flex-basis:86vw}
 }
+
+/* Clear controls for the horizontally browsable product cards. */
+.product-rail-controls{display:flex;align-items:center;justify-content:center;gap:14px;padding:0 18px 14px;color:#596579;font-size:14px;text-align:center}
+.product-rail-controls button{width:40px;height:40px;flex:0 0 40px;border:1px solid #e8c7ab;border-radius:14px;background:#ffd2ad;color:#201d1a;font-size:24px;line-height:1;cursor:pointer;touch-action:manipulation}
+.product-rail-controls button:hover{background:#f9bf91}
+.product-rail{overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;touch-action:pan-x;scrollbar-width:thin;}
+@media(max-width:760px){.product-rail-controls{gap:10px;padding-bottom:10px;font-size:12px}.product-rail-controls button{width:44px;height:44px;flex-basis:44px}}
