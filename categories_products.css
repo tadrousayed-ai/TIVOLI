@@ -1,0 +1,175 @@
+/*==================================================
+CATEGORY SECTION
+==================================================*/
+
+.category-section {
+    position: sticky;
+    top: 0;
+
+    z-index: 9999;
+
+    background: rgba(255, 255, 255, 0.087);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    padding: 0;
+
+    isolation: isolate;
+}
+
+
+/*==================================================
+CATEGORY SCROLL
+==================================================*/
+.category-scroll {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 14px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    flex: 1;
+
+    padding: 10px 40px;
+
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+
+    pointer-events: auto;
+
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #ffffff #f97316;
+}
+
+/* Chrome / Edge / Safari */
+.category-scroll::-webkit-scrollbar {
+    height: 6px; /* حجم الاسكرول */
+}
+
+.category-scroll::-webkit-scrollbar-track {
+    background: #f97316; /* البرتقالي */
+    border-radius: 10px;
+}
+
+.category-scroll::-webkit-scrollbar-thumb {
+    background: #ffffff; /* الأبيض */
+    border-radius: 10px;
+}
+
+.category-scroll::-webkit-scrollbar-thumb:hover {
+    background: #c86605c9;
+}
+/*==================================================
+CATEGORY CARD
+==================================================*/
+
+.category-card {
+
+    flex: 0 0 auto;
+
+    width: 90px;
+    min-width: 90px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    touch-action: manipulation;
+
+    -webkit-tap-highlight-color: transparent;
+
+    transition: transform .25s ease;
+}
+
+
+/*==================================================
+CATEGORY IMAGE
+==================================================*/
+
+.category-image {
+
+    width: 74px;
+    height: 74px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    transition: .25s ease;
+}
+
+
+/* IMAGE + VIDEO */
+
+.category-image img,
+.category-image video {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/*==================================================
+CATEGORY NAME
+==================================================*/
+
+.category-name {
+
+    margin-top: 6px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    white-space: wrap;
+
+    color: #222;
+
+    text-align: center;
+
+    line-height: 1.1;
+
+    text-transform: none;
+
+    word-break: normal;
+}
+
+
+/*==================================================
+ACTIVE
+==================================================*/
+
+.category-card.active .category-image {
+    border: 3px solid #ff6600;
+    transform: scale(1);
+
+    box-shadow:
+        0 8px 18px rgba(255, 102, 0, .25);
+}
+/*==================================================
+ACTIVE TEXT
+==================================================*/
+
+.category-card.active .category-name {
+
+    color: #222;
+}
+
+

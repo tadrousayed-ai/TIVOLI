@@ -1,0 +1,580 @@
+/* ===================================
+============ open-bill-card ===========
+   ===================================*/
+.open-bill-card {
+  position: fixed;
+
+  bottom: 20px;
+  right: 20px;
+  font-size: 15px;
+
+
+    background:
+
+        radial-gradient(
+            ellipse at 15% 20%,
+            rgba(37, 99, 235, 0.14),
+            transparent 40%
+        ),
+
+        radial-gradient(
+            ellipse at 85% 80%,
+            rgba(124, 58, 237, 0.12),
+            transparent 40%
+        ),
+
+        linear-gradient(
+            135deg,
+            #070b14 0%,
+            #0b1120 50%,
+            #05070d 100%
+        );
+
+    color: #ffffff;
+  color: white;
+
+  padding: 14px 25px;
+  border: none;
+
+  border-radius: 50px;
+
+  cursor: pointer;
+
+  z-index: 9999;
+
+  font-weight: bold;
+}
+.open-bill-card:hover {
+
+    background:
+
+        radial-gradient(
+            ellipse at 15% 20%,
+            rgba(37, 99, 235, 0.14),
+            transparent 40%
+        ),
+
+        radial-gradient(
+            ellipse at 85% 80%,
+            rgba(124, 58, 237, 0.12),
+            transparent 40%
+        ),
+
+        linear-gradient(
+            135deg,
+            #070b14 0%,
+            #0b1120 50%,
+            #05070d 100%
+        );
+
+    color: #ffffff;}
+
+.bill-popup {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0);
+
+  display: none;
+
+  justify-content: center;
+  align-items: center;
+
+  z-index: 999999999;
+}
+
+.bill-request-box {
+  width: 95%;
+  max-width: 500px;
+  transition: background 0.3s ease;
+  background-color: transparent;
+  transition: background-color 0.4s ease;
+  border: 1px solid linear-gradient(180deg, #0c5a6b, #0000000b);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  border-radius: 20px;
+  max-height: 650px;
+  overflow-y: auto;
+
+  padding: 20px;
+  border: 1px solid linear-gradient(180deg, #0c5a6b, #0000007c);
+}
+.bill-request-box::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+.bill-request-box::-webkit-scrollbar-thumb {
+  background-color: #f8fcfd;
+  border-radius: 6px;
+  border: 3px solid #e0e0e0;
+  transition: background-color 0.3s;
+}
+
+.bill-request-box::-webkit-scrollbar-thumb:hover {
+  background-color: #eaeeee;
+}
+
+.bill-request-box::-webkit-scrollbar-track {
+  background-color: rgba(224, 224, 224, 0.5);
+}
+
+.titel_bill-header_wep {
+  position: relative;
+  display: flex;
+  color: rgb(17, 11, 11);
+  text-align: center;
+  align-items: center;
+}
+
+.bill-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+#closeBillPopup {
+  width: 35px;
+  height: 35px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: red;
+
+  color: #fff;
+
+  cursor: pointer;
+}
+.payment-methods {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 12px;
+}
+
+.payment-card {
+  border: 2px solid #ddd;
+
+  border-radius: 15px;
+
+  padding: 20px;
+
+  text-align: center;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+
+  transition: 0.3s;
+  background-color: white;
+}
+
+.payment-card.active {
+  border-color: #007bff;
+
+  background: #eef5ff;
+}
+
+.payment-info-box {
+  display: none;
+
+  margin-top: 15px;
+
+  background: #f7f7f7;
+
+  padding: 15px;
+
+  border-radius: 12px;
+}
+
+.bill-request-box input {
+  width: 98%;
+
+  padding: 12px;
+
+  margin-top: 15px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 10px;
+}
+#send_bill_request {
+  width: 100%;
+
+  margin-top: 20px;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background-color: rgb(249, 115, 22);
+
+  color: #fff;
+
+  cursor: pointer;
+}
+#send_bill_request:hover {
+  background-color: rgba(249, 116, 22, 0.609);
+}
+#bill_status_text {
+  text-align: center;
+  width: 100%;
+  margin-top: 15px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  color: white;
+  background-color: #000;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px black;
+}
+
+/* ===================================
+================ table_shek ==============
+   ===================================*/
+
+.table_shek {
+  width: 100%;
+  border-collapse: collapse;
+  transition: background 0.3s ease;
+  background-color: transparent;
+  transition: background-color 0.4s ease;
+  border: 1px solid linear-gradient(180deg, #0c5a6b, #0000000b);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  border-radius: 15px;
+  overflow: hidden;
+  margin-top: 20px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.table_shek_header {
+  background: #c20a0a;
+  color: #fff;
+}
+
+.table_shek th {
+  padding: 14px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.table_shek td {
+  padding: 18px 10px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  color: white;
+}
+
+.table_shek_row:last-child td {
+  border-bottom: none;
+}
+
+.table_shek_ProductName {
+  color: #111;
+  font-weight: 700;
+}
+
+.table_shek_Quantity {
+  color: #444;
+  font-weight: 600;
+}
+
+.table_shek_line_total {
+  color: #c20a0a;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.table_shek_total_box {
+  margin-top: 20px;
+  transition: background 0.3s ease;
+  background-color: transparent;
+  transition: background-color 0.4s ease;
+  border: 1px solid linear-gradient(180deg, #0c5a6b, #0000000b);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  border-radius: 15px;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.table_shek_total_text {
+  color: #111;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.table_shek_data_total {
+  color: #c20a0a;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   SERVICE / TAX / DISCOUNT
+===================================================== */
+
+.bill-summary-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    margin: 7px 0;
+    padding: 12px 15px;
+
+    border-radius: 12px;
+
+    background: #fafafa;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+
+    transition: 0.2s ease;
+}
+
+
+/* =====================================================
+   LABEL
+===================================================== */
+
+.bill-summary-row span:first-child {
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #555;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   VALUE
+===================================================== */
+
+.bill-summary-row span:last-child {
+    font-size: 14px;
+    font-weight: 700;
+
+    color: #222;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   SERVICE
+===================================================== */
+
+.bill-summary-row.service-row {
+    background: #f7f9fc;
+}
+
+.bill-summary-row.service-row
+span:first-child::before {
+
+    content: "⚙";
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 25px;
+    height: 25px;
+
+    margin-left: 8px;
+
+    border-radius: 7px;
+
+    background: #e9eef5;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   TAX
+===================================================== */
+
+.bill-summary-row.tax-row {
+    background: #faf9f6;
+}
+
+.bill-summary-row.tax-row
+span:first-child::before {
+
+    content: "%";
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 25px;
+    height: 25px;
+
+    margin-left: 8px;
+
+    border-radius: 7px;
+
+    background: #eeeae1;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   DISCOUNT
+===================================================== */
+
+.bill-summary-row.bill-discount {
+
+    background: #fff7f7;
+
+    border: 1px solid #f3dede;
+}
+
+.bill-summary-row.bill-discount
+span:first-child {
+
+    color: #c0392b;
+}
+
+
+.bill-summary-row.bill-discount
+span:last-child {
+
+    color: #c0392b;
+
+    font-weight: 800;
+}
+
+
+.bill-summary-row.bill-discount
+span:first-child::before {
+
+    content: "−";
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 25px;
+    height: 25px;
+
+    margin-left: 8px;
+
+    border-radius: 7px;
+
+    background: #f9e2e2;
+
+    font-size: 15px;
+    font-weight: 900;
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.bill-summary-row:hover {
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .bill-summary-row {
+
+        padding: 11px 12px;
+
+        margin: 6px 0;
+
+        border-radius: 10px;
+    }
+
+    .bill-summary-row span:first-child {
+
+        font-size: 13px;
+    }
+
+    .bill-summary-row span:last-child {
+
+        font-size: 13px;
+    }
+
+}

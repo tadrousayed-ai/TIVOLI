@@ -1,0 +1,115 @@
+/* ===================================
+================ messages ==============
+   ===================================*/
+#messages-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  max-width: 50%;
+  z-index: 999999999999;
+  text-align: center;
+  pointer-events: none;
+}
+
+/* animation */
+@keyframes popIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* MESSAGE BOX */
+.msg {
+  display: inline-block;
+  padding: 14px 20px;
+  margin: 6px 0;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  min-width: 240px;
+  max-width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  animation: popIn 0.35s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* TYPES */
+.msg.success {
+  background: linear-gradient(135deg, #28a745, #5cd85c);
+}
+
+.msg.error {
+  background: linear-gradient(135deg, #dc3545, #ff6b6b);
+}
+
+.msg.info {
+  background: linear-gradient(135deg, #17a2b8, #4fd1e8);
+}
+
+.msg.warning {
+  background: linear-gradient(135deg, #ffc107, #ffda6a);
+  color: #000;
+}
+
+/* fade out */
+.msg.fade-out {
+  transform: scale(0.85);
+  opacity: 0;
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 600px) {
+  #messages-container {
+    max-width: 90%;
+    top: 45%;
+  }
+
+  .msg {
+    font-size: 13px;
+    padding: 10px 14px;
+    min-width: auto;
+  }
+}
+
+/* =========================
+   TABLET
+   ========================= */
+@media (min-width: 601px) and (max-width: 900px) {
+  #messages-container {
+    max-width: 70%;
+    top: 48%;
+  }
+
+  .msg {
+    font-size: 14px;
+    padding: 12px 18px;
+  }
+}
+
+/* =========================
+   DESKTOP LARGE
+   ========================= */
+@media (min-width: 1200px) {
+  #messages-container {
+    max-width: 40%;
+    top: 50%;
+  }
+
+  .msg {
+    font-size: 16px;
+    padding: 16px 24px;
+    font-weight: 700;
+  }
+}

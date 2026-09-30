@@ -1,0 +1,155 @@
+/* =========================
+   ORDER STATUS BOX
+========================= */
+
+.order-status-box {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  width: min(92%, 420px);
+  background: rgba(20, 20, 20, 0.92);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 18px;
+  color: #fff;
+  z-index: 9999;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+  animation: slideUp 0.35s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* =========================
+   PROGRESS BAR
+========================= */
+
+.progress-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.progress-step {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #555;
+  border: 3px solid #777;
+  transition: 0.4s;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.progress-step.active {
+  background: #22c55e;
+  border-color: #22c55e;
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.8);
+
+  animation: pulse 1.5s infinite;
+}
+
+.progress-line {
+  flex: 1;
+  height: 4px;
+  margin: 0 6px;
+  background: #555;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-line.active {
+  background: #22c55e;
+
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.18);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.status-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.order-status-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #2b2b2b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+
+  transition: 0.3s;
+}
+
+.order-status-info {
+  flex: 1;
+}
+
+#order-status-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .order-status-box {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .progress-step {
+    width: 16px;
+    height: 16px;
+  }
+
+  .order-status-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  #order-status-title {
+    font-size: 16px;
+  }
+}

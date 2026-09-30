@@ -1,0 +1,1128 @@
+/* =========================================
+   CATEGORY SECTIONS - GLOBAL
+========================================= */
+
+.customer-category-sections {
+  width: 100%;
+}
+
+
+/* =========================================
+   BASE CATEGORY SECTION
+========================================= */
+
+.category-section {
+  width: 100%;
+
+  padding: 90px 0 80px;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   FOOD SECTION
+========================================= */
+
+.category-section[data-category-section="food"] {
+
+  background:
+    radial-gradient(
+      ellipse at 20% 10%,
+      #ffffff 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at 85% 70%,
+      #eaf2ff 0%,
+      transparent 40%
+    ),
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f8fafc 45%,
+      #eef2f7 100%
+    );
+
+}
+
+
+/* =========================================
+   DRINKS SECTION
+========================================= */
+
+.category-section[data-category-section="drinks"] {
+
+  background:
+    radial-gradient(
+      ellipse at 20% 10%,
+      #ffffff 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at 85% 70%,
+      #dbeafe 0%,
+      transparent 40%
+    ),
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #eff6ff 45%,
+      #dbeafe 100%
+    );
+
+}
+
+
+/* =========================================
+   SHISHA SECTION
+========================================= */
+
+.category-section[data-category-section="shisha"] {
+
+  background:
+    radial-gradient(
+      ellipse at 20% 10%,
+      #ffffff 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at 85% 70%,
+      #e9d5ff 0%,
+      transparent 40%
+    ),
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #faf5ff 45%,
+      #f3e8ff 100%
+    );
+
+}
+
+
+/* =========================================
+   DESSERTS SECTION
+========================================= */
+
+.category-section[data-category-section="desserts"] {
+
+  background:
+    radial-gradient(
+      ellipse at 20% 10%,
+      #ffffff 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at 85% 70%,
+      #fbcfe8 0%,
+      transparent 40%
+    ),
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #fff1f2 45%,
+      #fce7f3 100%
+    );
+
+}
+
+
+/* =========================================
+   HEADER - BASE
+========================================= */
+
+.category-header {
+
+  width: 100%;
+
+  text-align: center;
+
+  margin-bottom: 5px;
+
+  box-sizing: border-box;
+}
+
+
+.category-header h2 {
+
+  margin: 0;
+
+  font-family: Georgia, serif;
+
+  font-size: 48px;
+
+  font-weight: 500;
+
+  letter-spacing: -2px;
+
+  color: #080808;
+
+}
+
+
+.category-header p {
+
+  margin-top: 12px;
+
+  font-size: 17px;
+
+  color: #555;
+
+}
+
+
+/* =========================================
+   FOOD HEADER
+========================================= */
+.category-section[data-category-section="food"]
+.category-header {
+    position: relative;
+}
+
+
+/* الغمشة الزرقاء خلف العنوان */
+.category-section[data-category-section="food"]
+.category-header::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 500px;
+    height: 180px;
+
+    transform: translate(-50%, -50%);
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(17, 33, 212, 0.45) 0%,
+            rgba(17, 33, 212, 0.22) 35%,
+            rgba(17, 33, 212, 0.08) 60%,
+            transparent 75%
+        );
+
+    filter: blur(35px);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+.category-section[data-category-section="food"]
+.category-header h2 {
+
+    position: relative;
+
+    z-index: 1;
+
+    color: #ffffff;
+
+    font-size: 58px;
+
+    background: transparent;
+
+    border-radius: 12px;
+}
+.category-section[data-category-section="food"]
+.category-header p {
+
+  color: #555;
+
+}
+
+
+/* =========================================
+   DRINKS HEADER
+========================================= */
+
+.category-section[data-category-section="drinks"]
+.category-header {
+    position: relative;
+}
+
+
+/* =========================================
+   GREEN PREMIUM GLOW
+========================================= */
+
+.category-section[data-category-section="drinks"]
+.category-header::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 500px;
+    height: 180px;
+
+    transform: translate(-50%, -50%);
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(7, 126, 9, 0.45) 0%,
+            rgba(7, 126, 9, 0.22) 35%,
+            rgba(7, 126, 9, 0.08) 60%,
+            transparent 75%
+        );
+
+    filter: blur(35px);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* =========================================
+   DRINKS TITLE
+========================================= */
+
+.category-section[data-category-section="drinks"]
+.category-header h2 {
+
+    position: relative;
+
+    z-index: 1;
+
+    color: #f8f8f8;
+
+    background: transparent;
+
+    font-size: 58px;
+
+    border-radius: 12px;
+
+}
+
+
+.category-section[data-category-section="drinks"]
+.category-header p {
+
+  color: #475569;
+
+}
+
+
+/* =========================================
+   SHISHA HEADER
+========================================= */
+
+.category-section[data-category-section="shisha"]
+.category-header {
+    position: relative;
+}
+
+
+/* =========================================
+   PURPLE PREMIUM GLOW
+========================================= */
+
+.category-section[data-category-section="shisha"]
+.category-header::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 500px;
+    height: 180px;
+
+    transform: translate(-50%, -50%);
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(59, 7, 100, 0.45) 0%,
+            rgba(59, 7, 100, 0.22) 35%,
+            rgba(59, 7, 100, 0.08) 60%,
+            transparent 75%
+        );
+
+    filter: blur(35px);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* =========================================
+   SHISHA TITLE
+========================================= */
+
+.category-section[data-category-section="shisha"]
+.category-header h2 {
+
+    position: relative;
+
+    z-index: 1;
+
+    color: #3b0764;
+
+    font-size: 60px;
+
+    background: transparent;
+
+}
+.category-section[data-category-section="shisha"]
+.category-header p {
+
+  color: #6b21a8;
+
+}
+
+
+/* =========================================
+   DESSERTS HEADER
+========================================= */
+
+.category-section[data-category-section="desserts"]
+.category-header {
+    position: relative;
+}
+
+
+/* =========================================
+   PINK PREMIUM GLOW
+========================================= */
+
+.category-section[data-category-section="desserts"]
+.category-header::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 500px;
+    height: 180px;
+
+    transform: translate(-50%, -50%);
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(131, 24, 67, 0.45) 0%,
+            rgba(131, 24, 67, 0.22) 35%,
+            rgba(131, 24, 67, 0.08) 60%,
+            transparent 75%
+        );
+
+    filter: blur(35px);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* =========================================
+   DESSERTS TITLE
+========================================= */
+
+.category-section[data-category-section="desserts"]
+.category-header h2 {
+
+    position: relative;
+
+    z-index: 1;
+
+    color: #831843;
+
+    font-size: 58px;
+
+    background: transparent;
+
+}
+
+
+.category-section[data-category-section="desserts"]
+.category-header p {
+
+  color: #9d174d;
+
+}
+
+
+/* =========================================
+   SCROLL - BASE
+   EACH SECTION HAS ITS OWN SCROLL
+========================================= */
+.category-scroll {
+    width: 100%;
+
+    display: flex;
+
+    gap: 45px;
+
+    padding: 20px 30px;
+
+    box-sizing: border-box;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scrollbar-width: thin;
+    scrollbar-color: #ffffff #f97316;
+
+    scroll-behavior: smooth;
+
+    overscroll-behavior-x: contain;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+.category-scroll::-webkit-scrollbar {
+    height: 6px;
+}
+
+.category-scroll::-webkit-scrollbar-track {
+    background: #f97316;
+    border-radius: 10px;
+}
+
+.category-scroll::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+.category-scroll::-webkit-scrollbar-thumb:hover {
+    background: #f3f3f3;
+}
+
+
+/* =========================================
+   FOOD SCROLL
+========================================= */
+
+.category-section[data-category-section="food"]
+.category-scroll {
+
+  gap: 45px;
+
+  padding: 20px 50px;
+
+}
+
+
+/* =========================================
+   DRINKS SCROLL
+========================================= */
+
+.category-section[data-category-section="drinks"]
+.category-scroll {
+
+  gap: 35px;
+
+  padding: 20px 50px;
+
+}
+
+
+/* =========================================
+   SHISHA SCROLL
+========================================= */
+
+.category-section[data-category-section="shisha"]
+.category-scroll {
+
+  gap: 50px;
+
+  padding: 20px 50px;
+    justify-content: center;
+
+}
+
+
+/* =========================================
+   DESSERTS SCROLL
+========================================= */
+
+.category-section[data-category-section="desserts"]
+.category-scroll {
+
+  gap: 40px;
+
+  padding: 20px 50px;
+
+}
+
+
+/* =========================================
+   CATEGORY CARD
+   SAME AS SETTINGS PREVIEW
+========================================= */
+
+.category-card {
+
+  flex: 0 0 280px;
+
+  height: 390px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  padding: 20px;
+
+  text-decoration: none;
+
+  color: #111;
+
+  border-radius: 30px;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff00 0%,
+    #f3f6fb00 100%
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.9);
+
+  box-shadow:
+    0 25px 60px rgba(148, 163, 184, 0.18),
+    0 5px 20px rgba(255, 255, 255, 0.8) inset;
+
+  backdrop-filter: blur(12px);
+
+  -webkit-backdrop-filter: blur(12px);
+
+  transition: 0.3s ease;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   FOOD CARDS
+========================================= */
+
+.category-section[data-category-section="food"]
+.category-card {
+
+  box-shadow:
+    0 25px 60px rgba(148, 163, 184, 0.18),
+    0 5px 20px rgba(255, 255, 255, 0.8) inset;
+
+}
+
+
+/* =========================================
+   DRINKS CARDS
+========================================= */
+
+.category-section[data-category-section="drinks"]
+.category-card {
+
+  box-shadow:
+    0 25px 60px rgba(59, 130, 246, 0.16),
+    0 5px 20px rgba(255, 255, 255, 0.8) inset;
+
+}
+
+
+/* =========================================
+   SHISHA CARDS
+========================================= */
+
+.category-section[data-category-section="shisha"]
+.category-card {
+
+  box-shadow:
+    0 25px 60px rgba(147, 51, 234, 0.18),
+    0 5px 20px rgba(255, 255, 255, 0.8) inset;
+
+}
+
+
+/* =========================================
+   DESSERTS CARDS
+========================================= */
+
+.category-section[data-category-section="desserts"]
+.category-card {
+
+  box-shadow:
+    0 25px 60px rgba(219, 39, 119, 0.16),
+    0 5px 20px rgba(255, 255, 255, 0.8) inset;
+
+}
+
+
+/* =========================================
+   CARD HOVER
+========================================= */
+
+.category-card:hover {
+
+  transform: translateY(-5px);
+
+}
+
+
+/* =========================================
+   ACTIVE
+========================================= */
+
+.category-card.active {
+
+  border: 3px solid #1769ff;
+
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 0 0 6px rgba(23, 105, 255, 0.08),
+    0 35px 80px rgba(23, 105, 255, 0.25);
+
+}
+
+
+/* =========================================
+   HIGHLIGHT
+========================================= */
+
+.category-card.highlight {
+
+  box-shadow:
+    0 30px 80px rgba(0, 166, 80, 0.18);
+
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.category-image {
+
+  width: 165px;
+
+  height: 165px;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  margin-top: 10px;
+
+  background: transparent;
+
+  box-shadow: none;
+
+}
+
+
+.category-image img,
+.category-image video {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+}
+
+
+/* =========================================
+   FOOD IMAGE
+========================================= */
+
+.category-section[data-category-section="food"]
+.category-image {
+
+  border-radius: 50%;
+
+}
+
+
+/* =========================================
+   DRINKS IMAGE
+========================================= */
+
+.category-section[data-category-section="drinks"]
+.category-image {
+
+  border-radius: 25px;
+
+}
+
+
+/* =========================================
+   SHISHA IMAGE
+========================================= */
+
+.category-section[data-category-section="shisha"]
+.category-image {
+
+  border-radius: 50%;
+
+}
+
+
+/* =========================================
+   DESSERTS IMAGE
+========================================= */
+
+.category-section[data-category-section="desserts"]
+.category-image {
+
+  border-radius: 30px;
+
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.category-content {
+
+  width: 100%;
+
+  text-align: center;
+
+  margin-top: 10px;
+
+}
+
+
+.category-content h3 {
+
+  margin: 0;
+
+  font-family: Georgia, serif;
+
+  font-size: 31px;
+
+  line-height: 1.05;
+
+  font-weight: 600;
+
+  letter-spacing: -1.5px;
+
+  text-transform: uppercase;
+
+}
+
+
+.product-count {
+
+  margin-top: 8px;
+
+  font-size: 15px;
+
+  color: #666;
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.category-footer {
+
+  position: absolute;
+
+  left: 25px;
+
+  right: 25px;
+
+  bottom: 25px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+}
+
+
+.category-footer span:first-child {
+
+  font-size: 14px;
+
+  letter-spacing: 2px;
+
+  color: #444;
+
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.arrow {
+
+  width: 44px;
+
+  height: 44px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border-radius: 14px;
+
+  background: white;
+
+  font-size: 24px;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.1);
+
+  transition: 0.3s ease;
+
+}
+
+
+.category-card:hover .arrow {
+
+  transform: translateX(4px);
+
+}
+
+
+.category-card.active .arrow {
+
+  background: #1769ff;
+
+  color: white;
+
+}
+
+
+.category-card.highlight .arrow {
+
+  background: #00a650;
+
+  color: white;
+
+}
+
+
+/* =========================================
+   BADGE
+========================================= */
+
+.category-badge {
+
+  position: absolute;
+
+  top: 15px;
+
+  left: 15px;
+
+  padding: 6px 14px;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  z-index: 10;
+
+}
+
+
+/* =========================================
+   TRANSITIONS
+========================================= */
+
+.category-card,
+.category-image,
+.category-content h3,
+.category-footer,
+.category-badge,
+.arrow {
+
+  transition:
+    width 0.3s ease,
+    height 0.3s ease,
+    border-radius 0.3s ease,
+    opacity 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+
+  /* =======================================
+     SECTION
+  ======================================= */
+
+  .category-section {
+
+    padding: 30px 0 35px;
+
+  }
+
+
+  /* =======================================
+     HEADER
+  ======================================= */
+
+  .category-header {
+
+    margin-bottom: 35px;
+
+    padding: 0 20px;
+
+  }
+
+
+  .category-header h2 {
+
+    font-size: 42px;
+
+    letter-spacing: -1px;
+
+  }
+
+
+  .category-header p {
+
+    font-size: 15px;
+
+  }
+
+
+  /* =======================================
+     FOOD SCROLL
+  ======================================= */
+
+  .category-section[data-category-section="food"]
+  .category-scroll {
+
+    padding: 20px;
+
+    gap: 25px;
+
+  }
+
+
+  /* =======================================
+     DRINKS SCROLL
+  ======================================= */
+
+  .category-section[data-category-section="drinks"]
+  .category-scroll {
+
+    padding: 20px;
+
+    gap: 25px;
+
+  }
+
+
+  /* =======================================
+     SHISHA SCROLL
+  ======================================= */
+
+  .category-section[data-category-section="shisha"]
+  .category-scroll {
+
+    padding: 20px;
+        justify-content: center;
+
+    gap: 30px;
+
+  }
+
+
+  /* =======================================
+     DESSERTS SCROLL
+  ======================================= */
+
+  .category-section[data-category-section="desserts"]
+  .category-scroll {
+
+    padding: 20px;
+
+    gap: 25px;
+
+  }
+
+
+  /* =======================================
+     CARD
+  ======================================= */
+
+  .category-card {
+
+    flex: 0 0 250px;
+
+    height: 360px;
+
+  }
+
+
+  /* =======================================
+     IMAGE
+  ======================================= */
+
+  .category-image {
+
+    width: 150px;
+
+    height: 150px;
+
+  }
+
+
+  /* =======================================
+     TITLE
+  ======================================= */
+
+  .category-content h3 {
+
+    font-size: 26px;
+
+  }
+
+
+}
+.category-section[data-category-section="shisha"]
+.category-scroll {
+    justify-content: center;
+}

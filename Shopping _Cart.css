@@ -1,0 +1,350 @@
+/* ===================================
+  ============ cartIcon ==============
+    ===================================*/
+
+#cartIcon {
+  position: fixed;
+  right: 90px;
+  top: 30px;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(82px);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  cursor: pointer;
+  outline: none;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+#cartCount {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  background: linear-gradient(135deg, #ff4d4d, #ff1f1f);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.45);
+  pointer-events: none;
+}
+
+#cartBox {
+  position: fixed;
+
+  top: 0;
+
+  right: -420px;
+
+  width: 380px;
+
+  max-width: 100%;
+
+  max-height: 50vh;
+  overflow-y: auto;
+  background-color: transparent;
+  transition: background-color 0.4s ease;
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  z-index: 9999999;
+
+  transition: 0.4s ease;
+
+  display: flex;
+
+  flex-direction: column;
+
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+}
+#cartBox::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+#cartBox::-webkit-scrollbar-thumb {
+  background-color: #0c5a6b;
+  border-radius: 6px;
+  border: 3px solid #e0e0e0;
+  transition: background-color 0.3s;
+}
+#cartBox.active {
+  right: 0;
+}
+
+#cartOverlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  display: none;
+
+  z-index: 2500;
+}
+
+#cartOverlay.active {
+  display: block;
+}
+
+.cart-header {
+  position: relative;
+  align-items: flex-end;
+  justify-content: end;
+  justify-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.cart-header h6 {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: auto;
+  font-size: 25px;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  top: 0;
+  margin: 0;
+  padding: 0;
+
+    background:
+
+        radial-gradient(
+            ellipse at 15% 20%,
+            rgba(37, 99, 235, 0.14),
+            transparent 40%
+        ),
+
+        radial-gradient(
+            ellipse at 85% 80%,
+            rgba(124, 58, 237, 0.12),
+            transparent 40%
+        ),
+
+        linear-gradient(
+            135deg,
+            #070b14 0%,
+            #0b1120 50%,
+            #05070d 100%
+        );
+  color: aliceblue;
+}
+
+.exit_card {
+  position: relative;
+  right: 18px;
+  top: 8px;
+  border: none;
+  width: 80px;
+  font-size: 20px;
+  color: #fefefe;
+  padding: 8px 6px;
+    background:
+
+        radial-gradient(
+            ellipse at 15% 20%,
+            rgba(37, 99, 235, 0.14),
+            transparent 40%
+        ),
+
+        radial-gradient(
+            ellipse at 85% 80%,
+            rgba(124, 58, 237, 0.12),
+            transparent 40%
+        ),
+
+        linear-gradient(
+            135deg,
+            #070b14 0%,
+            #0b1120 50%,
+            #05070d 100%
+        );
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.2s ease;
+}
+
+.contner_Total_card_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  width: fit-content;
+  margin: 15px auto;
+  padding: 12px 20px;
+
+  background: #1111112c;
+  border: 2px solid #c20a0a;
+  border-radius: 15px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.total_card_box_text {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.card_total_span {
+  color: #c20a0a;
+  font-size: 30px;
+  font-weight: bold;
+
+  background: #ffffff;
+  padding: 5px 14px;
+  border-radius: 10px;
+
+  min-width: 90px;
+  text-align: center;
+}
+
+.contner_Total_card_box {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+}
+.cart-item {
+  /* background-color: transparent; */
+  transition: background-color 0.4s ease;
+  background: rgba(255, 255, 255, 0.417);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+    border: 2px solid #ffffff;
+  border-radius: 15px;
+
+  padding: 15px;
+  margin-bottom: 15px;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item-name {
+  color: #111;
+  font-size: 18px;
+  font-weight: bold;
+
+  margin-bottom: 12px;
+}
+
+.cart-item-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.qty-btn {
+  width: 35px;
+  height: 35px;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: rgb(249, 115, 22);
+  color: #fff;
+
+  font-size: 20px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.qty-btn:hover {
+  background-color: rgb(249, 115, 22);
+  transform: scale(1.05);
+}
+
+.qty-number {
+  min-width: 35px;
+
+  text-align: center;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  color: #111;
+}
+
+.item-price {
+  margin-left: auto;
+
+  background: #111111;
+  color: #fff;
+
+  padding: 8px 12px;
+  border-radius: 10px;
+
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.remove-btn {
+  border: none;
+
+    background: #ef0000;
+  color: #fff;
+
+  width: 35px;
+  height: 35px;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  font-size: 18px;
+
+  transition: 0.3s;
+}
+
+.remove-btn:hover {
+  background: #c20a0a;
+}
+
+.sendBtn {
+  position: relative;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 50px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #ff4d4d, #ff1f1f);
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.sendBtn:hover {
+  background: linear-gradient(135deg, #ff1f1f, #ff4d4d);
+  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.5);
+}
+.cartText,
+#cartTotalMobile {
+  display: none;
+}
